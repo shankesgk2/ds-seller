@@ -3,7 +3,7 @@
 - 所有接口公共头部添加 `Accept:application/vnd.ds.v1+json`
 
 ### 授权
-- [x] 登录后获取token，token默认有效期是一个月。
+- [x] 登录后获取token，token默认，有效期是一个月。
 - [x] 需要授权的接口Header添加 `Authorization:Bearer token值`
 - [ ] 如果token到期前一星期有新请求，接口会返回一个新的token，APP替换新token，新token有效期一个月。
 - [ ] 如果token到期前一星期之内没有新请求，到期后APP要求用户重新登录。
@@ -28,7 +28,7 @@
 404|NOT FOUND|用户发出的请求针对的是不存在的记录，服务器没有进行操作，该操作是幂等的。
 406|Not Acceptable|用户请求的格式不可得（比如用户请求JSON格式，但是只有XML格式）。
 410|Gone|用户请求的资源被永久删除，且不会再得到的。
-422|Unprocesable entity|[POST/PUT/PATCH] 当创建一个对象时，发生一个验证错误。错误处理请参考[验证错误处理](#a)
+422|Unprocesable entity|[POST/PUT/PATCH] 当创建一个对象时，发生一个验证错误。错误处理请参考[验证错误处理](#user-content-验证错误处理)
 500|INTERNAL SERVER ERROR|服务器发生错误，用户将无法判断发出的请求是否成功。
 
 ### 验证错误处理
